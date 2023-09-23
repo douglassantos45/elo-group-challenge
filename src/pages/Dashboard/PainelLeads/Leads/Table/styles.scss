@@ -1,0 +1,62 @@
+@use '../../../../../styles/variables/colors' as *;
+
+.leads-table {
+  width: 100%;
+  padding-bottom: 1rem;
+  min-width: 500px !important;
+  padding-right: 0.175rem;
+  thead {
+    background-color: $blue-400;
+    color: $gray-50;
+  }
+  th {
+    font-size: 0.85rem;
+  }
+  th:nth-child(1) {
+    border-top-left-radius: 0.5rem;
+  }
+  th:nth-child(3) {
+    border-top-right-radius: 0.5rem;
+  }
+  th,
+  td {
+    border: 1px solid $gray-300;
+  }
+
+  tr {
+    text-align: center;
+    height: 4.5rem;
+  }
+
+  td {
+    font-size: 14pt;
+    position: relative;
+  }
+
+  td p {
+    position: absolute;
+    inset: 0;
+  }
+
+  &.dark {
+    thead {
+      background-color: $blue-700;
+    }
+    th,
+    td {
+      border: 1px solid $gray-700;
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: $gray-50;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $gray-400;
+  border-radius: 8px;
+  border: 1px none #ffffff;
+}

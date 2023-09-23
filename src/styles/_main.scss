@@ -1,0 +1,70 @@
+@use './variables/colors' as *;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap');
+
+* {
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.3s;
+}
+
+body {
+  height: 100vw;
+  margin: auto;
+  overflow: hidden;
+  background-color: $gray-100;
+  transition: background-color 0.5s !important;
+}
+
+button {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  outline-color: $dark-eloPrimary;
+  &:hover {
+    filter: brightness(1.8);
+  }
+  &:disabled {
+    cursor: wait !important;
+  }
+}
+
+.input-icon {
+  position: relative;
+  width: 100%;
+  transition: all 0.3s ease;
+
+  .icon-wrapper {
+    display: flex;
+    padding: 0.5rem;
+    background-color: $gray-50;
+    position: absolute;
+    top: 1.85rem;
+    right: 0.5rem;
+
+    svg {
+      cursor: pointer;
+      &:hover {
+        filter: brightness(0.9);
+        transition: all 0.3s ease;
+      }
+    }
+  }
+}
+
+.dark {
+  background-color: $dark-700;
+  color: $gray-200;
+
+  button {
+    &:hover {
+      filter: brightness(1.2);
+    }
+  }
+
+  .input-icon {
+    .icon-wrapper {
+      background-color: $dark-700;
+    }
+  }
+}

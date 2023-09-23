@@ -1,0 +1,27 @@
+@use '../../../../styles/variables/colors' as *;
+
+.leads {
+  overflow: hidden;
+  max-height: 361px;
+  min-height: 120px;
+  overflow-y: auto;
+  margin-top: 1rem;
+  position: relative;
+
+  > p {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0rem;
+    font-size: 0.925rem;
+    color: $gray-600;
+  }
+
+  @media (max-width: 590px) {
+    overflow-x: auto;
+
+    > p {
+      display: none;
+    }
+  }
+}

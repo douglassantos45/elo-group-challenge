@@ -1,0 +1,62 @@
+@use '../../../styles/variables/colors' as *;
+@use '../../../styles/variables/shadows' as *;
+
+.painel-leads {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $gray-200;
+  border-radius: 0.4rem;
+  padding: 3.5rem 2rem 2rem 2rem;
+  width: 100%;
+  max-width: 60rem;
+  background-color: $gray-50;
+  box-shadow: $shadow-lg;
+  header {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    img {
+      max-width: 12rem;
+      width: 100;
+      border-radius: 0.3rem;
+    }
+
+    h1 {
+      font-size: 1.2rem;
+    }
+  }
+  main {
+    margin-top: 2.5rem;
+    width: 100%;
+    > button {
+      background-color: $blue-500;
+      color: $gray-50;
+      font-weight: 600;
+      width: fit-content;
+      padding: 1rem 1.25rem;
+      border-radius: 0.4rem;
+      &:hover {
+        filter: brightness(1.1);
+      }
+    }
+  }
+
+  &.dark {
+    background-color: $dark-900;
+    border-color: $dark-500;
+  }
+
+  @media (max-width: 478px) {
+    header {
+      flex-direction: column;
+      gap: 0;
+    }
+
+    main {
+      > button {
+        max-width: max-content;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -5,9 +5,12 @@ import { Dashboard } from '../pages/Dashboard';
 export const Router = () => {
   return (
     <Routes>
-      <Route path="login" element={<Authentication />} />
-      <Route path="registration" element={<Authentication />} />
-      <Route path="/" element={<Dashboard />} />
+      <Route path="elo-group-challenge/login" element={<Authentication />} />
+      <Route
+        path="elo-group-challenger/egistration"
+        element={<Authentication />}
+      />
+      <Route path="/elo-group-challenge/" element={<Dashboard />} />
     </Routes>
   );
 };
